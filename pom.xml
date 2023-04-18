@@ -13,7 +13,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <asm.version>9.5</asm.version>
         <groovy.version>3.0.17</groovy.version>
+        <root.dir>${project.basedir}/..</root.dir>
+        <output.dir>${root.dir}/target/output</output.dir>
         <sass.root>website-template</sass.root>
+        <sass.dir>sass</sass.dir>
         <sass.skip>false</sass.skip>
     </properties>
 
@@ -23,8 +26,8 @@
                 <groupId>org.jbake</groupId>
                 <artifactId>jbake-maven-plugin</artifactId>
                 <configuration>
-                    <inputDirectory>${project.basedir}</inputDirectory>
-                    <outputDirectory>${project.build.directory}/output</outputDirectory>
+                    <inputDirectory>${root.dir}</inputDirectory>
+                    <outputDirectory>${output.dir}</outputDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -50,7 +53,7 @@
                         <configuration>
                             <executable>sass</executable>
                             <arguments>
-                                <argument>${project.basedir}/${sass.root}/assets/sass:${project.build.directory}/output/css</argument>
+                                <argument>${root.dir}/${sass.root}/assets/${sass.dir}:${output.dir}/css</argument>
                                 <argument>--update</argument>
                                 <argument>--no-source-map</argument>
                             </arguments>
