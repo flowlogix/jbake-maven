@@ -4,9 +4,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.flowlogix</groupId>
-    <artifactId>website-template</artifactId>
+    <artifactId>jbake-maven</artifactId>
     <version>1.x-SNAPSHOT</version>
-    <name>Web Site Templates</name>
+    <name>JBake Maven Execution</name>
     <packaging>pom</packaging>
 
     <properties>
@@ -15,6 +15,8 @@
         <groovy.version>3.0.17</groovy.version>
         <root.dir>${project.basedir}/..</root.dir>
         <output.dir>${root.dir}/target/output</output.dir>
+        <jbake.phase>generate-resources</jbake.phase>
+        <jbake.skip>false</jbake.skip>
         <sass.root>website-template</sass.root>
         <sass.dir>sass</sass.dir>
         <sass.skip>false</sass.skip>
@@ -32,7 +34,7 @@
                 <executions>
                     <execution>
                         <id>jbake-process-content</id>
-                        <phase>generate-resources</phase>
+                        <phase>${jbake.phase}</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
@@ -131,4 +133,19 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <profiles>
+        <profile>
+            <id>skip-jbake</id>
+            <activation>
+                <property>
+                    <name>jbake.skip</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <properties>
+                <jbake.phase>none</jbake.phase>
+            </properties>
+        </profile>
+    </profiles>
 </project>
