@@ -57,6 +57,7 @@
                             <arguments>
                                 <argument>${root.dir}/${sass.root}/assets/${sass.dir}:${output.dir}/css</argument>
                                 <argument>--update</argument>
+                                <argument>--style=compressed</argument>
                                 <argument>--no-source-map</argument>
                             </arguments>
                             <skip>${sass.skip}</skip>
