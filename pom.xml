@@ -14,7 +14,7 @@
         <asm.version>9.5</asm.version>
         <groovy.version>3.0.17</groovy.version>
         <root.dir>${project.basedir}/..</root.dir>
-        <output.dir>${root.dir}/target/output</output.dir>
+        <output.dir>${project.build.directory}/output</output.dir>
         <jbake.phase>generate-resources</jbake.phase>
         <jbake.skip>false</jbake.skip>
         <sass.root>website-template</sass.root>
