@@ -11,7 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <asm.version>9.5</asm.version>
+        <asm.version>9.6</asm.version>
         <groovy.version>3.0.19</groovy.version>
         <root.dir>${project.basedir}/..</root.dir>
         <output.dir>${project.build.directory}/output</output.dir>
