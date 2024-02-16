@@ -3,14 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.flowlogix</groupId>
     <artifactId>jbake-maven</artifactId>
     <version>1.x-SNAPSHOT</version>
     <name>JBake Maven Execution</name>
     <packaging>pom</packaging>
 
+    <parent>
+        <groupId>com.flowlogix</groupId>
+        <artifactId>base-pom</artifactId>
+        <version>2</version>
+    </parent>
+
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <asm.version>9.6</asm.version>
         <groovy.version>3.0.20</groovy.version>
         <root.dir>${project.basedir}/..</root.dir>
