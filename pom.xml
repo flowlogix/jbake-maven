@@ -16,7 +16,7 @@
 
     <properties>
         <asm.version>9.6</asm.version>
-        <groovy.version>3.0.20</groovy.version>
+        <groovy.version>3.0.21</groovy.version>
         <root.dir>${project.basedir}/..</root.dir>
         <output.dir>${project.build.directory}/output</output.dir>
         <jbake.phase>generate-resources</jbake.phase>
