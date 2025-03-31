@@ -15,7 +15,7 @@
     </parent>
 
     <properties>
-        <asm.version>9.7.1</asm.version>
+        <asm.version>9.8</asm.version>
         <groovy.version>3.0.24</groovy.version>
         <root.dir>${project.basedir}/..</root.dir>
         <output.dir>${project.build.directory}/output</output.dir>
